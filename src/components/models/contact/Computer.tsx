@@ -4,8 +4,8 @@ Command: npx gltfjsx@6.5.3 computer-optimized.glb -T
 Files: computer-optimized.glb [486.38KB] > C:\Users\devxyn\Desktop\Codes\portfolio_v2\public\models\computer-optimized-transformed.glb [39.72KB] (92%)
 */
 
-import React from 'react';
 import { useGLTF } from '@react-three/drei';
+import * as THREE from 'three';
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export function Computer(props: any) {
@@ -16,13 +16,13 @@ export function Computer(props: any) {
         <mesh
           castShadow
           receiveShadow
-          geometry={nodes.Cube000_ComputerDesk_0001_1.geometry}
+          geometry={(nodes.Cube000_ComputerDesk_0001_1 as THREE.Mesh).geometry}
           material={materials['ComputerDesk.001']}
         />
         <mesh
           castShadow
           receiveShadow
-          geometry={nodes.Cube000_ComputerDesk_0001_2.geometry}
+          geometry={(nodes.Cube000_ComputerDesk_0001_2 as THREE.Mesh).geometry}
           material={materials['FloppyDisk.001']}
         />
       </group>

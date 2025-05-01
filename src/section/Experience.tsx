@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import TitleHeader from '../components/TitleHeader';
 import { expCards } from '../constants/data';
 import GlowCard from '../components/GlowCard';
@@ -9,7 +10,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Experience = () => {
   useGSAP(() => {
-    gsap.utils.toArray('.timeline-card').forEach((card) => {
+    gsap.utils.toArray('.timeline-card').forEach((card: any) => {
       gsap.from(card, {
         xPercent: -100,
         opacity: 0,
@@ -38,7 +39,7 @@ const Experience = () => {
       });
     });
 
-    gsap.utils.toArray('.expText').forEach((text) => {
+    gsap.utils.toArray('.expText').forEach((text: any) => {
       gsap.from(text, {
         xPercent: 0,
         opacity: 0,
