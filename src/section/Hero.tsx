@@ -1,44 +1,28 @@
 import { useGSAP } from '@gsap/react';
+import gsap from 'gsap';
+
+import AnimatedCounter from '../components/AnimatedCounter';
 import Button from '../components/Button';
 import HeroExperience from '../components/hero-models/HeroExperience';
-import gsap from 'gsap';
-import AnimatedCounter from '../components/AnimatedCounter';
-
-const words = [
-  {
-    text: 'Ideas',
-    imgPath: '/images/ideas.svg',
-  },
-  {
-    text: 'Concept',
-    imgPath: '/images/concepts.svg',
-  },
-];
+import { words } from '../constants/data';
 
 const Hero = () => {
   useGSAP(() => {
     gsap.fromTo(
       '.hero-text h1',
-      {
-        y: 50,
-        opacity: 0,
-      },
-      {
-        y: 0,
-        opacity: 1,
-        stagger: 0.2,
-        duration: 1,
-        ease: 'power2.inOut',
-      },
+      { y: 50, opacity: 0 },
+      { y: 0, opacity: 1, stagger: 0.2, duration: 1, ease: 'power2.inOut' },
     );
-  }, []);
+  });
+
   return (
     <section id='hero' className='relative overflow-hidden'>
-      <div className='absolute top-0 left-0 bottom-0 z-10'>
-        <img src='/images/bg.png' alt='background' />
+      <div className='absolute top-0 left-0 z-10'>
+        <img src='/images/bg.png' alt='' />
       </div>
+
       <div className='hero-layout'>
-        {/* Hero Section */}
+        {/* LEFT: Hero Content */}
         <header className='flex flex-col justify-center md:w-full w-screen md:px-20 px-5'>
           <div className='flex flex-col gap-7'>
             <div className='hero-text'>
@@ -46,14 +30,14 @@ const Hero = () => {
                 Shaping
                 <span className='slide'>
                   <span className='wrapper'>
-                    {words.map((word) => (
-                      <span key={word?.text} className='flex items-center md:gap-3 gap-1 pb-2'>
+                    {words.map((word, index) => (
+                      <span key={index} className='flex items-center md:gap-3 gap-1 pb-2'>
                         <img
-                          src={word?.imgPath}
-                          alt={word?.text}
+                          src={word.imgPath}
+                          alt='person'
                           className='xl:size-12 md:size-10 size-7 md:p-2 p-1 rounded-full bg-white-50'
                         />
-                        {word.text}
+                        <span>{word.text}</span>
                       </span>
                     ))}
                   </span>
@@ -62,20 +46,23 @@ const Hero = () => {
               <h1>into Real Projects</h1>
               <h1>that Deliver Results</h1>
             </div>
+
             <p className='text-white-50 md:text-xl relative z-10 pointer-events-none'>
-              Hi, I'm Lawrence, a fullstack-developer based in the Philippines
+              Hi, I’m Adrian, a developer based in Croatia with a passion for code.
             </p>
-            <Button className='md:w-80 md:h-16 w-60 h-12' id='button' text='Seemy Work' />
+
+            <Button text='See My Work' className='md:w-80 md:h-16 w-60 h-12' id='counter' />
           </div>
         </header>
 
-        {/* 3D Model */}
+        {/* RIGHT: 3D Model or Visual */}
         <figure>
           <div className='hero-3d-layout'>
             <HeroExperience />
           </div>
         </figure>
       </div>
+
       <AnimatedCounter />
     </section>
   );
