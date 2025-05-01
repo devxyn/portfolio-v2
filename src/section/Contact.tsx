@@ -62,7 +62,7 @@ const Contact = () => {
         <div className='mt-16 grid-12-cols'>
           {/* LEFT SIDE */}
           <div className='xl:col-span-5'>
-            <div className='flex-center card-border rounded-xl p-10'>
+            <div className='flex-center card-border rounded-xl py-10 px-3 md:px-5'>
               <form ref={formRef} onSubmit={handleSubmit} className='w-full flex flex-col gap-7'>
                 <div>
                   <label htmlFor='name'>Your name</label>
