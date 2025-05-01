@@ -1,4 +1,3 @@
-import React from 'react';
 import { logoIconsList } from '../constants/data';
 
 const LogoIcon = ({ icon }: { icon: { imgPath: string } }) => {
