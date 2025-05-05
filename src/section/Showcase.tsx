@@ -1,7 +1,7 @@
-import { useRef } from 'react';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { useGSAP } from '@gsap/react';
+import { useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -32,7 +32,7 @@ const Showcase = () => {
           delay: 0.3 * (index + 1),
           scrollTrigger: {
             trigger: card,
-            start: 'top bottom-=100',
+            start: "top bottom-=100",
           },
         },
       );
@@ -48,9 +48,9 @@ const Showcase = () => {
               <img src='/images/yg-portfolio.png' alt='Year Glance App' />
             </div>
             <div className='text-content'>
-              <h2>On-Demand Rides Made Simple with a Powerful, User-Friendly App called Ryde</h2>
+              <h2>A Unified Calendar Tool that Integrates Google and Microsoft Calendars</h2>
               <p className='text-white-50 md:text-xl'>
-                An app built with React Native, Expo, & TailwindCSS for a fast, user-friendly experience.
+                An app built with React, Bootstrap, & Laravel for a fast, user-friendly experience.
               </p>
             </div>
           </div>
@@ -60,14 +60,24 @@ const Showcase = () => {
               <div className='image-wrapper bg-[#fbe4ff]'>
                 <img src='/images/az-portfolio.png' alt='App Zaloot Mobile' />
               </div>
-              <h2>The Library Management Platform</h2>
+              <div className='text-content'>
+                <h2>AppZaloot - A Geo-Location Based Social Media App</h2>
+                <p className='text-white-50 md:text-xl'>
+                  A React Native & Laravel application for seamless social networking on the go.
+                </p>
+              </div>
             </div>
 
             <div className='project' ref={ycDirectoryRef}>
               <div className='image-wrapper bg-[#eafff2]'>
                 <img src='/images/bukidmart-portfolio.png' alt='Bukidmart' />
               </div>
-              <h2>YC Directory - A Startup Showcase App</h2>
+              <div className='text-content'>
+                <h2>Bukidmart - A Local Produce E-Commerce App</h2>
+                <p className='text-white-50 md:text-xl'>
+                  A web app built with React, Tailwind, DaisyUI, & Node.js for connecting local farmers with consumers.
+                </p>
+              </div>
             </div>
           </div>
         </div>
