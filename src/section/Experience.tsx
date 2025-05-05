@@ -1,37 +1,37 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import TitleHeader from '../components/TitleHeader';
-import { expCards } from '../constants/data';
-import GlowCard from '../components/GlowCard';
-import gsap from 'gsap';
-import { useGSAP } from '@gsap/react';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import TitleHeader from "../components/TitleHeader";
+import { expCards } from "../constants/data";
+import GlowCard from "../components/GlowCard";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Experience = () => {
   useGSAP(() => {
-    gsap.utils.toArray('.timeline-card').forEach((card: any) => {
+    gsap.utils.toArray(".timeline-card").forEach((card: any) => {
       gsap.from(card, {
         xPercent: -100,
         opacity: 0,
-        transformOrigin: 'left left',
+        transformOrigin: "left left",
         duration: 1,
-        ease: 'power2.inOut',
+        ease: "power2.inOut",
         scrollTrigger: {
           trigger: card,
-          start: 'top 80%',
+          start: "top 80%",
         },
       });
 
-      gsap.to('.timeline', {
-        transformOrigin: 'bottom bottom',
-        ease: 'power1.inOut',
+      gsap.to(".timeline", {
+        transformOrigin: "bottom bottom",
+        ease: "power1.inOut",
         scrollTrigger: {
-          trigger: '.timeline',
-          start: 'top center',
-          end: '70% center',
+          trigger: ".timeline",
+          start: "top center",
+          end: "70% center",
           onUpdate: (self) => {
-            gsap.to('.timeline', {
+            gsap.to(".timeline", {
               scaleY: 1 - self.progress,
             });
           },
@@ -39,15 +39,15 @@ const Experience = () => {
       });
     });
 
-    gsap.utils.toArray('.expText').forEach((text: any) => {
+    gsap.utils.toArray(".expText").forEach((text: any) => {
       gsap.from(text, {
         xPercent: 0,
         opacity: 0,
         duration: 1,
-        ease: 'power2.inOut',
+        ease: "power2.inOut",
         scrollTrigger: {
           trigger: text,
-          start: 'top 60%',
+          start: "top 60%",
         },
       });
     });
@@ -63,7 +63,7 @@ const Experience = () => {
               <div key={card.title} className='exp-card-wrapper'>
                 <div className='xl:w-2/6'>
                   <GlowCard card={card} index={index}>
-                    <img src={card.imgPath} alt='exp-img' />
+                    <img src={card.imgPath} alt='exp-img' className='w-32 object-cover' />
                   </GlowCard>
                 </div>
 
@@ -76,7 +76,7 @@ const Experience = () => {
 
                     <div className='expText flex xl:gap-20 md:gap-10 gap-5 relative z-20'>
                       <div className='timeline-logo'>
-                        <img src={card.logoPath} alt='logo' />
+                        <img src={card.logoPath} alt='logo' className='w-20 h-20 p-4 rounded-full' />
                       </div>
                       <div>
                         <h1 className='font-semibold text-3xl'>{card.title}</h1>
