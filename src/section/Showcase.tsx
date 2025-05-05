@@ -48,7 +48,7 @@ const Showcase = () => {
               <img src='/images/yg-portfolio.png' alt='Year Glance App' />
             </div>
             <div className='text-content'>
-              <h2>A Unified Calendar Tool that Integrates Google and Microsoft Calendars</h2>
+              <h2>YearGlance - A Unified Calendar Tool that Integrates Google and Microsoft Calendars</h2>
               <p className='text-white-50 md:text-xl'>
                 An app built with React, Bootstrap, & Laravel for a fast, user-friendly experience.
               </p>
