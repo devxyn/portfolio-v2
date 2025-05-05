@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Mona+Sans:ital,wght@0,200..900;1,200..900&display=swap');
-@import 'tailwindcss';
+@import url("https://fonts.googleapis.com/css2?family=Mona+Sans:ital,wght@0,200..900;1,200..900&display=swap");
+@import "tailwindcss";
 
 :root {
   --gradient: radial-gradient(circle, #e5e5e5 0%, #fff 100%);
@@ -12,7 +12,7 @@ body {
   background-color: black;
   color: white;
   scroll-behavior: smooth;
-  font-family: 'Mona Sans', sans-serif;
+  font-family: "Mona Sans", sans-serif;
 }
 
 section {
@@ -20,7 +20,7 @@ section {
 }
 
 @theme {
-  --font-sans: 'Mona Sans', sans-serif;
+  --font-sans: "Mona Sans", sans-serif;
   --color-white-50: #d9ecff;
   --color-black-50: #1c1c21;
   --color-black-100: #0e0e10;
@@ -162,10 +162,10 @@ section {
     }
 
     .first-project-wrapper {
-      @apply h-full flex flex-col justify-between xl:w-[60%];
+      @apply h-full flex flex-col justify-between xl:w-[60%] lg:mt-20;
 
       .image-wrapper {
-        @apply xl:h-[70vh] md:h-[50vh] h-96 relative;
+        @apply xl:h-[70vh] md:h-[50vh] h-64 relative;
 
         img {
           @apply w-full h-full object-cover rounded-xl absolute inset-0;
@@ -180,13 +180,17 @@ section {
         }
 
         h2 {
-          @apply text-2xl md:text-3xl lg:text-4xl font-bold;
+          @apply text-lg md:text-3xl lg:text-4xl font-bold;
         }
       }
     }
 
     .project-list-wrapper {
       @apply flex md:flex-row flex-col xl:flex-col gap-10 xl:w-[40%];
+
+      .project {
+        @apply w-full md:w-1/2 lg:w-full;
+      }
 
       .image-wrapper {
         @apply xl:h-[37vh] md:h-52 lg:h-72 h-64 relative rounded-xl xl:px-5 2xl:px-12 py-0;
@@ -196,8 +200,12 @@ section {
         @apply w-full h-full object-contain rounded-xl;
       }
 
-      h2 {
-        @apply text-lg md:text-xl lg:text-2xl font-semibold mt-5;
+      .text-content {
+        @apply space-y-5 mt-5;
+
+        h2 {
+          @apply text-lg md:text-xl lg:text-2xl font-semibold mt-5;
+        }
       }
     }
   }
@@ -424,7 +432,7 @@ section {
 
 .card::before {
   position: absolute;
-  content: '';
+  content: "";
   width: 100%;
   height: 100%;
   left: 50%;
