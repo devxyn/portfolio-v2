@@ -80,7 +80,11 @@ const Experience = () => {
 
                     <div className='expText flex xl:gap-20 md:gap-10 gap-5 relative z-20'>
                       <div className='timeline-logo'>
-                        <img src={card.logoPath} alt='logo' className='w-20 h-20 p-4 rounded-full' />
+                        <img
+                          src={card.logoPath}
+                          alt='icon'
+                          className='w-10 h-10 md:w-20 md:h-20 p-0 md:p-4 rounded-full'
+                        />
                       </div>
                       <div>
                         <h1 className='font-semibold text-3xl'>{card.title}</h1>
