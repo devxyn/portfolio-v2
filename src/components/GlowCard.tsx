@@ -36,7 +36,7 @@ const GlowCard = ({ card, children, index, isCompany, companyName, companyLogo }
       className='card card-border timeline-card rounded-xl p-5 md:p-10 mb-5 break-inside-auto'>
       <div className='glow' />
       <div className='flex items-center gap-1 mb-5'>
-        {isCompany && <img src={companyLogo} alt={companyName} className='w-32 object-cover mr-10 md:mr-20' />}
+        {isCompany && <img src={companyLogo} alt={companyName} className='w-32 object-cover mr-8 md:mr-20' />}
         {Array.from({ length: 5 }, (_, i) => (
           <img src='/images/star.png' alt='star' key={i} className='size-5' />
         ))}
