@@ -1,5 +1,5 @@
-import { useEffect, useState } from 'react';
-import { navLinks } from '../constants/data';
+import { useEffect, useState } from "react";
+import { navLinks } from "../constants/data";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -13,14 +13,15 @@ const Navbar = () => {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
-    return () => window.removeEventListener('scroll', handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
   return (
-    <header className={`navbar ${scrolled ? 'scrolled' : 'not-scrolled'}`}>
+    <header className={`navbar ${scrolled ? "scrolled" : "not-scrolled"}`}>
       <div className='inner'>
-        <a className='logo' href='#hero'>
+        <a className='logo flex items-center gap-2' href='#hero'>
+          <img src='/favicon.svg' alt='logo' className='w-10 h-10' />
           Devxyn
         </a>
         <nav className='desktop'>
