@@ -1,17 +1,17 @@
-import { useGSAP } from '@gsap/react';
-import gsap from 'gsap';
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 
 // import AnimatedCounter from '../components/AnimatedCounter';
-import Button from '../components/Button';
-import HeroExperience from '../components/models/hero-models/HeroExperience';
-import { words } from '../constants/data';
+import Button from "../components/Button";
+import HeroExperience from "../components/models/hero-models/HeroExperience";
+import { words } from "../constants/data";
 
 const Hero = () => {
   useGSAP(() => {
     gsap.fromTo(
-      '.hero-text h1',
+      ".hero-text h1",
       { y: 50, opacity: 0 },
-      { y: 0, opacity: 1, stagger: 0.2, duration: 1, ease: 'power2.inOut' },
+      { y: 0, opacity: 1, stagger: 0.2, duration: 1, ease: "power2.inOut" },
     );
   });
 
@@ -48,7 +48,7 @@ const Hero = () => {
             </div>
 
             <p className='text-white-50 md:text-xl relative z-10 pointer-events-none'>
-              Hi, I’m Lawrence, a developer based in the Philippines.
+              Hi, I’m Lawrence, a full-stack developer based in the Philippines.
             </p>
 
             <Button text='See My Work' className='md:w-80 md:h-16 w-60 h-12' id='work' />
