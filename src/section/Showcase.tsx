@@ -45,7 +45,9 @@ const Showcase = () => {
         <div className='showcaselayout'>
           <div ref={rydeRef} className='first-project-wrapper'>
             <div className='image-wrapper'>
-              <img src='/images/yg-portfolio.png' alt='Year Glance App' />
+              <a href='https://app.yearglance.com/' target='_blank' rel='noopener noreferrer'>
+                <img src='/images/yg-portfolio.png' alt='Year Glance App' />
+              </a>
             </div>
             <div className='text-content'>
               <h2>YearGlance - A Unified Calendar Tool that Integrates Google and Microsoft Calendars</h2>
@@ -58,7 +60,12 @@ const Showcase = () => {
           <div className='project-list-wrapper overflow-hidden'>
             <div className='project' ref={libraryRef}>
               <div className='image-wrapper bg-[#fbe4ff]'>
-                <img src='/images/az-portfolio.png' alt='App Zaloot Mobile' />
+                <a
+                  href='https://play.google.com/store/apps/details?id=com.appzaloot&hl=en'
+                  target='_blank'
+                  rel='noopener noreferrer'>
+                  <img src='/images/az-portfolio.png' alt='App Zaloot Mobile' />
+                </a>
               </div>
               <div className='text-content'>
                 <h2>AppZaloot - A Geo-Location Based Social Media App</h2>
@@ -70,7 +77,9 @@ const Showcase = () => {
 
             <div className='project' ref={ycDirectoryRef}>
               <div className='image-wrapper bg-[#eafff2]'>
-                <img src='/images/bukidmart-portfolio.png' alt='Bukidmart' />
+                <a href='https://bukidmart.onrender.com/' target='_blank' rel='noopener noreferrer'>
+                  <img src='/images/bukidmart-portfolio.png' alt='Bukidmart' />
+                </a>
               </div>
               <div className='text-content'>
                 <h2>Bukidmart - A Local Produce E-Commerce App</h2>
