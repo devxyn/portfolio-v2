@@ -302,11 +302,11 @@ const socialImgs = [
   //   url: "https://www.facebook.com/",
   //   imgPath: "/images/fb.png",
   // },
-  // {
-  //   name: "x",
-  //   url: "https://www.x.com/",
-  //   imgPath: "/images/x.png",
-  // },
+  {
+    name: "github",
+    url: "https://github.com/devxyn",
+    imgPath: "/images/github.png",
+  },
   {
     name: "linkedin",
     url: "https://www.linkedin.com/in/johnlawrencehermo/",
