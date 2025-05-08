@@ -9,12 +9,16 @@ import Hero from "./section/Hero";
 import Showcase from "./section/Showcase";
 import TechStack from "./section/TechStack";
 // import Testimonials from "./section/Testimonials";
-import CustomCursor from "./components/CustomCursor";
+import CanvasCursor from "./components/CanvasCursor";
+import { useMediaQuery } from "react-responsive";
 
 const App = () => {
+  const isLargeScreen = useMediaQuery({ query: "(min-width: 1024px)" });
+
   useEffect(() => {
     document.addEventListener("contextmenu", (e) => e.preventDefault());
   }, []);
+
   return (
     <>
       <Navbar />
@@ -27,7 +31,7 @@ const App = () => {
       {/* <Testimonials /> */}
       <Contact />
       <Footer />
-      <CustomCursor />
+      {isLargeScreen && <CanvasCursor />}
     </>
   );
 };
