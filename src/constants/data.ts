@@ -91,24 +91,64 @@ const abilities = [
 
 const techStackImgs = [
   {
-    name: "React Developer",
-    imgPath: "/images/logos/react.png",
+    name: "React/React Native",
+    imgPath: "/images/logos/reactjs.png",
   },
   {
-    name: "Python Developer",
-    imgPath: "/images/logos/python.svg",
+    name: "HTML",
+    imgPath: "/images/logos/html5.png",
   },
   {
-    name: "Backend Developer",
-    imgPath: "/images/logos/node.png",
+    name: "CSS",
+    imgPath: "/images/logos/css3.png",
   },
   {
-    name: "Interactive Developer",
-    imgPath: "/images/logos/three.png",
+    name: "JavaScript",
+    imgPath: "/images/logos/js.png",
   },
   {
-    name: "Project Manager",
-    imgPath: "/images/logos/git.svg",
+    name: "TypeScript",
+    imgPath: "/images/logos/typescript.png",
+  },
+  {
+    name: "PHP",
+    imgPath: "/images/logos/php.png",
+  },
+  {
+    name: "Tailwind CSS",
+    imgPath: "/images/logos/tailwindcss.png",
+  },
+  {
+    name: "Next.js",
+    imgPath: "/images/logos/nextjs2.png",
+  },
+  {
+    name: "Redux/Redux Toolkit",
+    imgPath: "/images/logos/redux.png",
+  },
+  {
+    name: "Node.js",
+    imgPath: "/images/logos/nodejs.png",
+  },
+  {
+    name: "Laravel",
+    imgPath: "/images/logos/laravel.png",
+  },
+  {
+    name: "MongoDB",
+    imgPath: "/images/logos/mongodb.png",
+  },
+  {
+    name: "MySQL",
+    imgPath: "/images/logos/mysql.png",
+  },
+  {
+    name: "PostgreSQL",
+    imgPath: "/images/logos/postgresql.png",
+  },
+  {
+    name: "Git",
+    imgPath: "/images/logos/git.png",
   },
 ];
 
