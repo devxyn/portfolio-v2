@@ -465,3 +465,15 @@ section {
 .card:hover::before {
   opacity: 1;
 }
+
+/* Add these styles to your src/index.css file */
+* {
+  cursor: none !important;
+}
+
+/* Optional: Show default cursor for mobile devices */
+@media (max-width: 768px) {
+  * {
+    cursor: auto !important;
+  }
+}
