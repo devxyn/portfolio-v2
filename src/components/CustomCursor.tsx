@@ -1,10 +1,14 @@
 import { useEffect, useState } from "react";
+import { useMediaQuery } from "react-responsive";
 
 const CustomCursor = () => {
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [isPointer, setIsPointer] = useState(false);
+  const isLargeScreen = useMediaQuery({ query: "(min-width: 1024px)" });
 
   useEffect(() => {
+    if (!isLargeScreen) return;
+
     const updatePosition = (e: MouseEvent) => {
       setPosition({ x: e.clientX, y: e.clientY });
     };
@@ -21,7 +25,9 @@ const CustomCursor = () => {
       window.removeEventListener("mousemove", updatePosition);
       window.removeEventListener("mouseover", updateCursor);
     };
-  }, []);
+  }, [isLargeScreen]);
+
+  if (!isLargeScreen) return null;
 
   return (
     <div
